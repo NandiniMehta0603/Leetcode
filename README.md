@@ -31,3 +31,17 @@ If we need to **search/manipulate** a bunch of strings, **Trie** will be the bes
 
 ### Heuristic 10:
 If the problem is related to a **LinkedList** and we can't use extra space, then use the **Fast and Slow Pointer** approach.
+
+
+##Observations:
+
+Sometimes we take nums[i+1]-nums[i]...this might give runtime error due to overflow, example explains:
+
+int a = 2147483647;   // Maximum value for an int
+int b = -2147483647;  // Minimum value for an int
+
+// This subtraction will result in an overflow
+int result = b - a;   // Overflow occurs
+
+// Casting to long to prevent overflow
+long resultLong = (long)b - (long)a;  // No overflow
